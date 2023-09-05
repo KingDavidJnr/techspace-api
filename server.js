@@ -23,6 +23,11 @@ app.use(helmet())
 // Allows us to access a user's token stored as a cookie
 app.use(cookieParser())
 
+//Defines the welcome home page on the root page
+app.get('/', (req, res) => {
+  res.send('Welcome to the TechSpace API')
+})
+
 // Lets the server listen on all files
 app.use('/api/v1', router)
 
